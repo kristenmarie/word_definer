@@ -3,7 +3,7 @@ class Word
   attr_accessor(:definitions, :word)
   def initialize(attributes)
     @word = attributes.fetch(:word)
-    @definitions = {}
+    @definitions = []
   end
 
   def self.all()
@@ -15,7 +15,7 @@ class Word
   end
 
   def add_definition(definition)
-    @definitions = definition
+    @definitions.push(definition)
   end
 
   def self.find_word(search_word)

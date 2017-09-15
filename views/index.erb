@@ -1,17 +1,44 @@
-<h1>My Words!</h1>
-<ul>
-  <% @words.each do |word| %>
-
-    <li><a href="/definitions/<%= word.word %>"><%= word.word %></a></li>
-  <% end %>
-</ul>
-
-<h2>Add a word:</h2>
-
-<form action="/" method="post">
-  <div class="form-group">
-    <label for="word">Word</label>
-    <input id="word" name="word" class="form-control" type="text">
+<div class="container">
+  <div class="page-header">
+    <h1>Words and Definitions</h1>
   </div>
-  <button type="submit" class="btn">Add word!</button>
-</form>
+
+  <div id="index_description" class="panel panel-primary">
+    <div class="panel-heading"><h2>Hello! Welcome to the wonderful world of <strong>words</strong>!</h2></div>
+    <div class="panel-body">
+      <p>To add a word to your word list, enter it into the space provided below and click the Add Word! button to add it to your list of words! Click on the word to go to its definition page!</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Add a word column -->
+    <div class="col">
+      <div class="panel panel-info">
+        <div class="panel-heading"><h2>Add a word:</h2></div>
+        <div class="panel-body">
+          <form action="/" method="post">
+            <div class="form-group">
+              <label for="word">Word</label>
+              <input id="word" name="word" class="form-control" type="text">
+            </div>
+            <button type="submit" class="btn">Add word!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- List of words column -->
+    <div class="col">
+      <div class="panel panel-success">
+        <div class="panel-heading"><h2>Your list of words:</h2></div>
+        <div class="panel-body">
+          <ul>
+            <% @words.each do |word| %>
+
+              <li><a href="/definitions/<%= word.word %>"><%= word.word %></a></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

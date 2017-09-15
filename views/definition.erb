@@ -1,20 +1,25 @@
-<h1><%= @word.word %></h1>
-
-<%@word.definitions.each do |definition| %>
-  <h2><%= definition %></h2>
-<% end %>
-
-
-
-<h2>Add defintion:</h2>
-
-<form action="/definitions/<%= @word.word%>" method="post">
-  <div class="form-group">
-    <label for="definition">Definition</label>
-    <input id="definition" name="definition" class="form-control" type="text">
+<div class="container">
+  <div class="jumbotron">
+    <h1><%= @word.word %></h1>
   </div>
-  <button type="submit" class="btn">Add definition!</button>
-</form>
-<br>
-<br>
-<a href="/">Go back to my words!</a>
+
+
+  <%@word.definitions.each do |definition| %>
+    <h2><%= definition %></h2>
+  <% end %>
+
+
+
+  <h2>Add defintion:</h2>
+
+  <form action="/definitions/<%= @word.word%>" method="post">
+    <div class="form-group">
+      <label for="definition">Definition</label>
+      <input id="definition" name="definition" class="form-control" type="text">
+    </div>
+    <button type="submit" class="btn">Add definition!</button>
+  </form>
+  <br>
+  <br>
+  <a href="/">Go back to my words!</a>
+</div>

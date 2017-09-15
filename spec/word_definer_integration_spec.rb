@@ -28,4 +28,15 @@ describe('Definitions page', {:type => :feature}) do
     click_button("Add definition!")
     expect(page).to have_content("character")
   end
+
+  it("allows user to enter more than one definition") do
+    visit('/')
+    click_link('villain')
+    fill_in('definition', :with => "a bad guy")
+    click_button("Add definition!")
+    fill_in('definition', :with => "the opposite of a hero")
+    click_button("Add definition!")
+    expect(page).to have_content("bad")
+    expect(page).to have_content("opposite")
+  end
 end

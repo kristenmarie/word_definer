@@ -11,17 +11,17 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 ## Specifications
 
 * Creates instance of word with word class when given word, with initially no definitions.
-  * Example input: "villian"
-  * Example output: "villian", []
+  * Example input: "villain"
+  * Example output: "villain"
 * Saves each word in a list of words.
   * Example input: word.save() word2.save()
   * Example output: [word, word2]
 * Word class can return list of all saved words.
   * Example input: Word.all()
-  * Example output: ["villian", "hero"]
+  * Example output: ["villain", "hero"]
 * User can add definition to words
-  * Example input: villian.definition("a character whose evil actions or motives are important to the plot")
-  * Example output: villian.definition = ["a character whose evil actions or motives are important to the plot"]
+  * Example input: villain.definition("a character whose evil actions or motives are important to the plot")
+  * Example output: villain.definition = ["a character whose evil actions or motives are important to the plot"]
 
 ## Setup/Installation Requirements
 

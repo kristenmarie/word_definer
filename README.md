@@ -40,7 +40,7 @@ _This simple web application allows users to create a list of words. After more 
 * _In word_definer directory run: ```ruby app.rb```_
 * _Open web browser of choice_
 * _In web browsers address field enter http://localhost:4567/ __
-* _Or Simply visit 
+* _Or Simply visit [this page](https://peaceful-falls-24422.herokuapp.com/ )
 
 
 ## Known Bugs

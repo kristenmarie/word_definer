@@ -22,6 +22,7 @@ describe('Word list Page', {:type => :feature}) do
     click_link("Random Word!")
     expect(page).to have_content("Add definition:")
   end
+end
 
 describe('Definitions page', {:type => :feature}) do
   it("when word is clicked it goes to definitions page") do

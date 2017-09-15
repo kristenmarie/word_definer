@@ -54,3 +54,15 @@ describe(".find_word") do
     expect(Word.find_word("villain")).to(eq(villain))
   end
 end
+
+describe(".sort") do
+  it("sorts array of words") do
+    Word.empty()
+    villain = Word.new({:word => "villain"})
+    hero = Word.new({:word => "hero"})
+    villain.save()
+    hero.save()
+    Word.sort()
+    expect(Word.all()).to(eq([hero, villain]))
+  end
+end

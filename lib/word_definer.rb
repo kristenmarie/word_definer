@@ -30,4 +30,11 @@ class Word
     @@words = []
   end
 
+  def self.sort()
+    @@words = @@words.sort do |a,b|
+      a.word <=> b.word
+    end
+
+  end
+
 end

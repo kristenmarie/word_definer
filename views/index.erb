@@ -1,0 +1,17 @@
+<h1>My Words!</h1>
+<ul>
+  <% @words.each do |word| %>
+
+    <li><a href="/definitions/<%= word.word %>"><%= word.word %></a></li>
+  <% end %>
+</ul>
+
+<h2>Add a word:</h2>
+
+<form action="/" method="post">
+  <div class="form-group">
+    <label for="word">Word</label>
+    <input id="word" name="word" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Add word!</button>
+</form>

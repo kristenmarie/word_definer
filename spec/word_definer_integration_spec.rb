@@ -3,12 +3,24 @@ require 'capybara/rspec'
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-describe('Word list', {:type => :feature}) do
+describe('Word list Page', {:type => :feature}) do
   it("saves new word and shows word on screen") do
     visit('/')
     fill_in('word', :with => "alligator")
     click_button("Add word!")
     expect(page).to have_content("alligator")
+  end
+
+  it('routes to random word definition page when random word button is clicked') do
+    visit('/')
+    fill_in('word', :with => "window")
+    click_button("Add word!")
+    fill_in('word', :with => "door")
+    click_button("Add word!")
+    fill_in('word', :with => "elephant")
+    click_button("Add word!")
+    click_link("Random Word!")
+    expect(page).to have_content("Add definition:")
   end
 end
 

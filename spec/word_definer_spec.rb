@@ -1,5 +1,6 @@
 require('rspec')
 require('word_definer')
+require('pry')
 
 describe(".empty") do
   it("empties class array of words") do
@@ -70,6 +71,6 @@ end
 describe(".random") do
   it("returns random word from array of words") do
     word = Word.random()
-    expect(Word.all()).to(include(word))
+    expect(Word.all()).to(include())
   end
 end

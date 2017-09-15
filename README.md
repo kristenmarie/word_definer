@@ -28,6 +28,9 @@ _This simple web application allows users to create a list of words. After more 
 * Sort array of words in alphabetical order
   * Example input: [zebra, apple, orange, pickle]
   * Example output: [apple, orange, pickle, zebra]
+* Can call random on Word class to receive random word from array of words
+  * Example input: Word.random()
+  * Example output: zebra
 
 ## Setup/Installation Requirements
 

@@ -29,6 +29,10 @@ font-family: 'Baloo Tammudu', cursive;
   margin-top: 15px;
 }
 
+.random {
+  text-align: center;
+}
+
 h1 {
   font-size: 60px;
   text-align: center;

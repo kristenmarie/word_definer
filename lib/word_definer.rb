@@ -37,7 +37,8 @@ class Word
   end
 
     def self.random()
-      @@words.sample
+      word = @@words.sample
+      return word.word
     end
 
 end

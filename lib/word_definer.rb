@@ -27,4 +27,8 @@ class Word
     end
   end
 
+  def self.empty()
+    @@words = []
+  end
+
 end

@@ -32,10 +32,24 @@ describe("#defintion") do
   end
 end
 
+describe(".empty") do
+  it("empties class array of words") do
+    alligator = Word.new({:word => "alligator"})
+    snake = Word.new({:word => "snake"})
+    lizard = Word.new({:word => "lizard"})
+    alligator.save()
+    snake.save()
+    lizard.save()
+    expect(Word.empty()).to(eq([]))
+  end
+end
+
 describe(".find_word") do
   it("finds word object when given the word") do
     villain = Word.new({:word => "villain"})
     hero = Word.new({:word => "hero"})
+    villain.save()
+    hero.save()
     expect(Word.find_word("villain")).to(eq(villain))
   end
 end

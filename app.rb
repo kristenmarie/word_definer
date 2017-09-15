@@ -4,7 +4,6 @@ require('pry')
 also_reload('lib/**/*.rb')
 require('./lib/word_definer')
 
-
 get('/')do
   @words = Word.all()
   erb(:index)

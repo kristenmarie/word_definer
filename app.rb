@@ -18,11 +18,11 @@ post('/') do
   erb(:index)
 end
 
-# get('/words/:word') do
-#   @word = word.find_word(params[:word])
-#   erb(:definitions)
-# end
-#
+get('/definitions/:word') do
+  @word = Word.find_word(params[:word])
+  erb(:definition)
+end
+
 # post('/words/:word') do
 #   word = params["last_name"]
 #   @contact = Contact.find_by_last_name(name)

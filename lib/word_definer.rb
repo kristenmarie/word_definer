@@ -19,4 +19,12 @@ class Word
     @definitions = definition
   end
 
+  def self.find_word(search_word)
+    @@words.each do |word|
+      if word.word == search_word
+        return word
+      end
+    end
+  end
+
 end

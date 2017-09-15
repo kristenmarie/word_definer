@@ -31,3 +31,11 @@ describe("#defintion") do
     expect(villain.definitions).to(eq("a character whose evil actions or motives are important to the plot"))
   end
 end
+
+describe(".find_word") do
+  it("finds word object when given the word") do
+    villain = Word.new({:word => "villain"})
+    hero = Word.new({:word => "hero"})
+    expect(Word.find_word("villain")).to(eq(villain))
+  end
+end

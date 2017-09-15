@@ -22,6 +22,9 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 * User can add definition to words
   * Example input: villain.definition("a character whose evil actions or motives are important to the plot")
   * Example output: villain.definition = ["a character whose evil actions or motives are important to the plot"]
+* Can find word in list of words when given the word
+  * Example input: "villain".find_word
+  * Example output: villain
 
 ## Setup/Installation Requirements
 

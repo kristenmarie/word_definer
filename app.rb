@@ -23,10 +23,9 @@ get('/definitions/:word') do
   erb(:definition)
 end
 
-# post('/words/:word') do
-#   word = params["last_name"]
-#   @contact = Contact.find_by_last_name(name)
-#   new_phone_number = params["new_phone_number"]
-#   @contact.add_phone_number(new_phone_number)
-#   erb(:definitions)
-# end
+post('/definitions/:word') do
+  @word = Word.find_word(params[:word])
+  new_definition = params["definition"]
+  @word.add_definition(new_definition)
+  erb(:definition)
+end

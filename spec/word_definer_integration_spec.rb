@@ -20,4 +20,12 @@ describe('Definitions page', {:type => :feature}) do
     click_link('villain')
     expect(page).to have_content("villain")
   end
+
+  it("allows user to enter definition and displays it") do
+    visit('/')
+    click_link('villain')
+    fill_in('definition', :with => "a character whose evil actions or motives are important to the plot")
+    click_button("Add definition!")
+    expect(page).to have_content("character")
+  end
 end

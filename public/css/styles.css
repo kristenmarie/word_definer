@@ -3,6 +3,20 @@
 font-family: 'Raleway', sans-serif;
 font-family: 'Baloo Tammudu', cursive;
 
+.random a:link {
+    color: white;
+}
+.random a:visited {
+    color: white;
+}
+
+.random a:active {
+    color: white;
+}
+
+.random a:hover {
+    text-decoration: none;
+}
 .page-header {
   text-align: center;
 }

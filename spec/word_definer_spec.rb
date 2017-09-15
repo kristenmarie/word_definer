@@ -23,3 +23,11 @@ describe(".save") do
     expect(Word.all).to(eq([villain, hero]))
   end
 end
+
+describe("#defintion") do
+  it("adds definition to word") do
+    villain = Word.new({:word => "villain"})
+    villain.add_definition("a character whose evil actions or motives are important to the plot")
+    expect(villain.definitions).to(eq("a character whose evil actions or motives are important to the plot"))
+  end
+end

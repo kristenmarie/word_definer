@@ -15,4 +15,8 @@ class Word
     @@words.push(self)
   end
 
+  def add_definition(definition)
+    @definitions = definition
+  end
+
 end

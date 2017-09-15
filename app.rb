@@ -18,6 +18,11 @@ post('/') do
   erb(:index)
 end
 
+post('/sort') do
+  @words = Word.sort()
+  erb(:index)
+end
+
 get('/definitions/:word') do
   @word = Word.find_word(params[:word])
   erb(:definition)

@@ -34,7 +34,10 @@ class Word
     @@words = @@words.sort do |a,b|
       a.word <=> b.word
     end
-
   end
+
+    def self.random()
+      @@words.sample
+    end
 
 end

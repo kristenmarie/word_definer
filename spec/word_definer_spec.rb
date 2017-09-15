@@ -66,3 +66,10 @@ describe(".sort") do
     expect(Word.all()).to(eq([hero, villain]))
   end
 end
+
+describe(".random") do
+  it("returns random word from array of words") do
+    word = Word.random()
+    expect(Word.all()).to(include(word))
+  end
+end

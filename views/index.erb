@@ -6,7 +6,7 @@
   <div id="index_description" class="panel panel-primary">
     <div class="panel-heading main"><h2>Hello! Welcome to the wonderful world of <strong>words</strong>!</h2></div>
     <div class="panel-body main">
-      <p>To add a word to your word list, enter it into the space provided below and click the Add Word! button to add it to your list of words! Click on the word to go to its definition page!</p>
+      <p>To add a word to your word list, enter it into the space provided below and click the Add Word! button to add it to your list of words! Click on the word to go to its definition page! Click on the sort button below your words to put them in alphabetical order!</p>
     </div>
   </div>
 
@@ -33,10 +33,12 @@
         <div class="panel-body">
           <ul>
             <% @words.each do |word| %>
-
               <li><a href="/definitions/<%= word.word %>"><%= word.word %></a></li>
             <% end %>
           </ul>
+          <form action="/sort" method="post"  method="post">
+            <button type="submit" class="btn btn-primary" >Sort!</button>
+          </form>
         </div>
       </div>
     </div>

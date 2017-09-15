@@ -1,22 +1,23 @@
+<div class="jumbotron">
+  <h1><%= @word.word %></h1>
+</div>
 <div class="container">
-  <div class="jumbotron">
-    <h1><%= @word.word %></h1>
-  </div>
-
-  <h2>Add defintion:</h2>
   <div class="definition-form">
     <form action="/definitions/<%= @word.word%>" method="post">
       <div class="form-group">
-        <label for="definition">Definition</label>
+        <label for="definition">Add definition:</label>
         <input id="definition" name="definition" class="form-control" type="text">
       </div>
       <button type="submit" class="btn btn-primary">Add definition!</button>
     </form>
   </div>
-  <a href="/">Go back to my words!</a>
-  <div class="word-definitions">
-    <%@word.definitions.each do |definition| %>
-      <h2><%= definition %></h2>
-    <% end %>
+  <div class="panel panel-info word-definitions">
+    <div class="panel-heading"> <h2>Definitions for <%= @word.word %>:</h2></div>
+    <div class="panel-body">
+      <%@word.definitions.each do |definition| %>
+        <h2>-<%= definition %></h2>
+      <% end %>
+    </div>
   </div>
+    <a id="home-link" class="btn btn-primary" href="/">Go back to my words!</a>
 </div>

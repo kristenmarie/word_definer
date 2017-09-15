@@ -7,3 +7,14 @@ describe("Word") do
     expect(villain.word).to(eq("villain"))
   end
 end
+
+describe(".all") do
+  it("can return a list of all saved words, empty at first") do
+    expect(Word.all).to(eq([]))
+  end
+  
+end
+
+describe(".save") do
+  it("saves each word into a list of words")
+end

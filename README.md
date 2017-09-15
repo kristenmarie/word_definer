@@ -6,7 +6,7 @@
 
 ## Description
 
-_This simple web application allows users to create a list of words. After more than one word has been created, user can click sort button at any time to update their list so that it is in alphabetical order. When the user clicks on a word it takes them to that words definition page. On the definition page user can add multiple definitions for the word using a form. When the go back to my words button is clicked the user is returned to the landing page with their list of words._
+_This simple web application allows users to create a list of words. After more than one word has been created, user can click sort button at any time to update their list so that it is in alphabetical order. When the user clicks on a word it takes them to that words definition page. On the definition page user can add multiple definitions for the word using a form. When the go back to my words button is clicked the user is returned to the landing page with their list of words. When there are more than 2 words in list, random word button appears that routes to random word definition page on click._
 
 ## Specifications
 
@@ -32,15 +32,16 @@ _This simple web application allows users to create a list of words. After more 
   * Example input: Word.random()
   * Example output: zebra
 
+
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _Clone or Download this GitHub Repository_
+* _In terminal, open word_definer directory_
+* _In word_definer directory run: ```ruby app.rb```_
+* _Open web browser of choice_
+* _In web browsers address field enter http://localhost:4567/ __
+* _Or Simply visit 
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
 
 ## Known Bugs
 
